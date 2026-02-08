@@ -516,6 +516,44 @@
             transform: translateY(-1px);
         }
 
+        .continue-btn {
+            width: auto;
+            padding: 22px 50px;
+            font-size: 1.3em;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c9184a 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1.5s ease 2s backwards;
+            box-shadow: 0 8px 25px rgba(201, 24, 74, 0.4);
+            font-family: 'Georgia', serif;
+        }
+
+        .continue-btn:hover {
+            background: linear-gradient(135deg, #ff8ab3 0%, #d42a5a 100%);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(201, 24, 74, 0.6);
+        }
+
+        .continue-btn:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .error-message {
             color: #d47a9e;
             margin-top: 20px;
@@ -735,11 +773,13 @@
         <div class="success-content">
             <h2>❤️ Unlocked! ❤️</h2>
             <span class="big-heart">💕</span>
-            <p>You remembered! ✨</p>
             <p style="margin-top: 25px; font-size: 1.8em;">
                 Our love story continues...<br>
                 Happy Valentine's Day, my love! 💖
             </p>
+            <button class="continue-btn" onclick="window.location.href='valentines_surprise.html'" style="margin-top: 30px;">
+                💝 Continue the Journey 💝
+            </button>
         </div>
     </div>
 
@@ -774,7 +814,7 @@
             }
 
             // CHANGE THIS TO YOUR ACTUAL DATE (format: YYYY-MM-DD)
-            const correctDate = '2025-07-30'; // CHANGE THIS!
+            const correctDate = '2025-07-30';
             
             if (inputDate === correctDate) {
                 // Success!
